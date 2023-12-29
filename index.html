@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positivity</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .header {
+        background-color: #66f542;
+        padding: 2px;
+        text-align: center;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: #c20cbf;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+      .header {
+        z-index: 1;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .topnav a:hover {
+        background-color: #0cbcc2;
+        color: black;
+      }
+
+      .X {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .row1 {
+        overflow: auto;
+        height: 380px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 5px;
+      }
+
+      /* .column.side {
+        width: 300px;
+        overflow: hidden;
+      } */
+
+      .column.side img {
+        height: 300px;
+        width: 320px;
+        /* margin: 0px -200px; */
+      }
+
+      .column.middle {
+        width: 600px;
+      }
+
+      .row1:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* @media screen and (max-width: 600px) {
+        .column.side,
+        .column.middle {
+          width: 100%;
+        }
+      } */
+
+      /* Gradient background */
+
+      body {
+        background: linear-gradient(to right, rgb(145, 4, 145), #f5af19);
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .Y {
+        background-image: url("img/parallax.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+      }
+
+      .Z {
+        width: 100%;
+        padding: 100px 0px;
+      }
+
+      .bucket {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid white;
+      }
+
+      .container {
+        background-color: rgb(145, 4, 145);
+        column-gap: 30px;
+        height: 400px;
+        width: 350px;
+        padding: 12px 10px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid white;
+      }
+
+      .item img {
+        background-color: white;
+        border-radius: 4px;
+        height: 200px;
+        width: 150px;
+        margin: 0px 0px 20px;
+      }
+
+      .image-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .images-container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .images-container div {
+        /* width: 100%; */
+        padding: 150px 0px 150px 150px;
+      }
+
+      .images-container img {
+        width: 800px;
+        height: 500px;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        font-size: 24px;
+        cursor: pointer;
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        z-index: 1;
+      }
+
+      .left-arrow {
+        left: 10px;
+      }
+
+      .right-arrow {
+        right: 10px;
+      }
+
+      .contact-form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 20px auto;
+      }
+
+      .section-title {
+        font-size: 36px;
+        color: white;
+        text-align: center;
+        margin: 40px 0;
+      }
+
+      .quote {
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .author {
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        padding: 55px 0px 0px;
+      }
+
+      .contact-form {
+        display: flex;
+        justify-content: center;
+        row-gap: 5px;
+        column-gap: 10px;
+      }
+
+      .footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer a {
+        color: white;
+      }
+
+      .footer a:hover {
+        color: #f5af19;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation bar  -->
+
+    <div class="topnav">
+      <a href="#Home">Home</a>
+      <a href="#About Me">About Me</a>
+      <a href="#Gallery">Gallery</a>
+      <a href="#Contact">Contact</a>
+
+      <a href="#" style="float: right">Sign in</a>
+      <a href="#" style="float: right">Sign up</a>
+    </div>
+
+    <!-- Heading -->
+
+    <div class="header">
+      <h1>
+        <marquee>Hello World!!! Have A Nice Day😊</marquee>
+      </h1>
+    </div>
+
+    <!-- Home -->
+
+    <div class="Y" id="Home">
+      <div class="X">
+        <img src="img/logo.png" alt="Logo" class="logo" />
+        <p class="quote">
+          "The most important thing is to enjoy your life - to be happy - it's
+          all that matters."
+        </p>
+        <p class="author">- Audrey Hepburn</p>
+      </div>
+
+      <div class="row1" style="color: white">
+        <div class="column side">
+          <h2>Positivity</h2>
+          <img
+            src="https://www.gaia.com/wp-content/uploads/earth-element-rituals-mountain-woman-share.jpg"
+          />
+        </div>
+        <div class="column middle">
+          <h2>Life in my eyes...</h2>
+          <p>
+            Life.. What is life? It seems a roller coaster to me.. Rollercoaster
+            of emotions.. Rollercoaster of experiences.. I can also interprete
+            life as an examination or competition that includes a range of
+            module tests.. Where we win.. we pass.. also there is loss and we
+            fail.. But we learn from our previous mistakes and implement that
+            learning in our next module test of life.. I know it's easy to say
+            but we really never learn from our previous mistakes sincerely and
+            act as per our emotional side of mind guides us to do.. So we again
+            face a loss in our present module test and spit out all our anger
+            and grief on ourselves and the whole world around us, with a broken
+            heart.. tired soul.. fed up mind.. We start seeing the whole world
+            in the perspective of our last bunch of awful experiences.. And
+            eventually with so many confusions, doubts and fear, built up in our
+            mind, we become cold.. our heart becomes cold.. We start focusing on
+            ourselves only.. The world starts judging us as selfish ones but we
+            are okay with this because we don't expect anything great from that
+            world anymore.. This is a phase, we learn most out of the life..
+            This becomes the serious preparation period for our final module
+            test to enter a great phase of life..😊
+          </p>
+        </div>
+        <div class="column side">
+          <h2>Good Vibes</h2>
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/mature-woman-with-book-outdoors-in-autumn-royalty-free-image-1659020569.jpg?crop=1xw:0.84415xh;center,top&resize=1200:*"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="color: white">
+        But I know we sometimes become unable to act as per our serious
+        preparation plans made with a strong mind earlier.. That state of mind
+        sometimes at some phases of life, starts to melt and we become weak.. We
+        start missing those beautiful memories, goals and persons for which we
+        had come to that extend where we faced loss.. We miss those which are
+        the reasons behind our current state of mind and soul.. How funny is
+        it.. But I believe and am gonna write here that, we miss the previous
+        versions of those persons and goals that had attracted and cherished us
+        once.. fulfilled our soul once.. But as of now we have already seen
+        their real faces or changed versions.. we should avoid all kind of
+        feelings or emotions or that 'yess I could have done this if I would
+        have done that' type regrets related to those past modules of life..
+        Because whether with failure or win, we have already overcome all those
+        phases and yes life is all about 'moving on' and 'letting things go'..
+        Every person.. Every phase.. Every desire.. come and reside with us for
+        a certain period of time.. play their roles in our life.. help us living
+        through certain hard phases of our life.. make memories.. and leave..
+        Now this word 'leave' may hurt some of us.. or I can say almost everyone
+        of us because that's the main reason behind all these plot twists of our
+        story of life we had to go through.. But I say let's take this word
+        'leave' as normal as the word 'come' as I used in the first half of that
+        sentence.. Let's take it as a flow.. or better we can say a cycle of
+        phases that starts with 'come' and ends with 'leave'.. And again starts
+        with 'come' and the cycle repeats.. If we want to lead to a better life
+        for is then we should repeat the cycle in a forward manner.. not in a
+        static manner that revolves around the same entities..
+      </p>
+    </div>
+
+    <!-- About me -->
+
+    <div class="Z" id="About Me">
+      <h1 class="section-title">About me</h1>
+      <p class="quote">
+        Hii..This is me Sonalika, a grad student and an aspiring web developer,
+        trying to have fun during practicing some web development techniques and
+        write out all my thoughts on living a beautiful life.
+      </p>
+      <p class="- Sonalika"></p>
+    </div>
+
+    <!-- Gallery -->
+
+    <div class="A" id="Gallery">
+      <h1 class="section-title">Gallery</h1>
+      <div class="bucket">
+        <div class="container">
+          <div class="item">
+            <img
+              src="https://i.pinimg.com/originals/27/2e/1e/272e1e01f346ac497e7250d85517dc62.png"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://th.bing.com/th/id/R.218b1465dd0a85182f9c37b88a561894?rik=AZLiRLMTtJThHg&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1555445091-5a8b655e8a4a%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=zxWN3TuAfJo7X7FF8hVEnreSCP7EoM9K%2bWKCT1DI3J0%3d&risl=&pid=ImgRaw&r=0"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://i.pinimg.com/736x/83/b4/21/83b42176179df59e13dab84a7fc7cffd.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://i.pinimg.com/originals/6f/b1/96/6fb196517420d98e71a757f1222e4785.jpg"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="item">
+            <img
+              src="https://images.unsplash.com/photo-1464716821973-e1031cfa43dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8ZmluZHx8MHx8fHwxNjE4OTY3ODMz&ixlib=rb-1.2.1&q=80&w=1080"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://www.enwallpaper.com/wp-content/uploads/photo-1594819167477-290dd33b4daa.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://images.unsplash.com/photo-1527555197883-98e27ca0c1ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://images.unsplash.com/photo-1627178416548-314c1f13cbef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="item">
+            <img
+              src="https://media1.popsugar-assets.com/files/thumbor/scGrwaZRTVqqgzuRv37N2P_1fHk/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2018/10/03/720/n/44673913/2c1416a65bb4eb820b0d35.48993854_/i/Things-My-Tween-Daughter-Has-Taught-Me.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://th.bing.com/th/id/R.3575530cf18b3f34f52f586cc832eb12?rik=BjF7R8YicyR6uw&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1560626174-129ffcc27033%3fixlib%3drb-1.2.1%26q%3d80%26fm%3djpg%26crop%3dentropy%26cs%3dtinysrgb%26w%3d1080%26fit%3dmax%26ixid%3deyJhcHBfaWQiOjEyMDd9&ehk=jlDkrtX8ntRsl7MSApuZd%2fvViLp4mbrMbzcjtOQc%2bx8%3d&risl=&pid=ImgRaw&r=0"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://th.bing.com/th/id/R.52ec32cb86132791ed954716ba5f8d9c?rik=Evu4giPS2JvVng&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1518949396226-d2cd9ab6889e%3fcrop%3dentropy%26cs%3dtinysrgb%26fit%3dmax%26fm%3djpg%26ixid%3dMnwxMjA3fDB8MXxzZWFyY2h8M3x8bGl2aW5nJTIwdGhpbmdzfHwwfHx8fDE2MTkwMzA0NTg%26ixlib%3drb-1.2.1%26q%3d80%26w%3d1080&ehk=1RSUh6EMmG6Tq5tp1BeSwAKp6vT%2fdm0NWnAdmYQiCeQ%3d&risl=&pid=ImgRaw&r=0"
+              alt="..."
+            />
+          </div>
+          <div class="item">
+            <img
+              src="https://th.bing.com/th/id/R.e3500c0e4f3d68f0ddf9301041047baf?rik=hEwWy%2bbiZ%2b1SbA&riu=http%3a%2f%2fimages.media-allrecipes.com%2fuserphotos%2f960x960%2f4518422.jpg&ehk=SFa6cCC9hK3CevfiuQ9e6jokZiW5FCdI7F1XW1iMlbg%3d&risl=&pid=ImgRaw&r=0"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="image-slider">
+        <div class="arrow left-arrow">&lt;</div>
+        <div class="images-container">
+          <div>
+            <img
+              src="https://quotefancy.com/media/wallpaper/3840x2160/2280949-Oprah-Winfrey-Quote-Living-your-best-life-is-your-most-important.jpg"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.powerofpositivity.com/wp-content/uploads/2021/01/Robert-Brault-768x432.png"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.success.com/wp-content/uploads/legacy/sites/default/files/13_1.jpg"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/56/5e/ad/565eadf37d9058df2e271a3ab8a903e2.png"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i0.wp.com/www.creativehealthyfamily.com/wp-content/uploads/2022/10/we-all-have-limits-quote.png?resize=768%2C768&ssl=1"
+              alt="..."
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/86/2d/57/862d57c00ceb18750a63ab7af0bc4d08.jpg"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="arrow right-arrow">&gt;</div>
+      </div>
+
+      <!-- <script src="script.js"></script> -->
+    </div>
+
+    <!-- Contact -->
+
+    <div class="container1" id="Contact">
+      <h1 class="section-title">Contact</h1>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="5"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+      <p>© 2023 SS. All rights reserved.</p>
+      <p>
+        Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a>, and
+        <a href="#">Instagram</a>.
+      </p>
+    </div>
+  </body>
+  <script>
+    const imagesContainer = document.querySelector(".images-container");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    const imageWidth = document.querySelector(
+      ".images-container img"
+    ).clientWidth;
+    let currentPosition = 0;
+
+    leftArrow.addEventListener("click", () => {
+      currentPosition += imageWidth;
+      if (currentPosition > 0) {
+        currentPosition = -imageWidth * (imagesContainer.children.length - 1);
+      }
+      imagesContainer.style.transform = `translateX(${currentPosition}px)`;
+    });
+
+    rightArrow.addEventListener("click", () => {
+      currentPosition -= imageWidth;
+      if (
+        currentPosition <
+        -imageWidth * (imagesContainer.children.length - 1)
+      ) {
+        currentPosition = 0;
+      }
+      imagesContainer.style.transform = `translateX(${currentPosition}px)`;
+    });
+  </script>
+</html>
