@@ -10,7 +10,6 @@
       }
 
       .header {
-        background-color: rgb(247, 190, 84);
         padding: 2px;
         text-align: center;
       }
@@ -43,7 +42,8 @@
 
       .X {
         display: flex;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .row1 {
@@ -86,23 +86,21 @@
       /* Gradient background */
 
       body {
-        background: linear-gradient(to right, rgb(145, 4, 145), #f5af19);
+        background: linear-gradient(to right, rgb(145, 4, 145), #2bf519);
         min-height: 100vh;
         font-family: Arial, sans-serif;
-      }
-
-      .Y {
-        background-image: url("img/parallax.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 500px;
+        font-size: smaller;
       }
 
       .Z {
         width: 100%;
-        padding: 100px 0px;
+        padding: 200px 0px 50px;
+      }
+
+      .A {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .bucket {
@@ -180,42 +178,36 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 5px;
+        column-gap: 10px;
       }
 
       .logo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        margin: 30px 20px auto;
       }
 
       .section-title {
         font-size: 36px;
-        color: white;
         text-align: center;
         margin: 40px 0;
       }
 
       .quote {
         font-size: 24px;
-        color: white;
         text-align: center;
-        margin: 20px 0;
+        padding-top: 30px;
       }
 
       .author {
         font-size: 18px;
-        color: white;
-        text-align: center;
         font-weight: bold;
-        padding: 55px 0px 0px;
-      }
-
-      .contact-form {
-        display: flex;
-        justify-content: center;
-        row-gap: 5px;
-        column-gap: 10px;
+        padding-top: 50px;
       }
 
       .footer {
@@ -260,15 +252,27 @@
 
     <div class="Y" id="Home">
       <div class="X">
-        <img src="img/logo.png" alt="Logo" class="logo" />
+        <img
+          src="https://th.bing.com/th/id/R.52ec32cb86132791ed954716ba5f8d9c?rik=Evu4giPS2JvVng&riu=http%3a%2f%2fimages.unsplash.com%2fphoto-1518949396226-d2cd9ab6889e%3fcrop%3dentropy%26cs%3dtinysrgb%26fit%3dmax%26fm%3djpg%26ixid%3dMnwxMjA3fDB8MXxzZWFyY2h8M3x8bGl2aW5nJTIwdGhpbmdzfHwwfHx8fDE2MTkwMzA0NTg%26ixlib%3drb-1.2.1%26q%3d80%26w%3d1080&ehk=1RSUh6EMmG6Tq5tp1BeSwAKp6vT%2fdm0NWnAdmYQiCeQ%3d&risl=&pid=ImgRaw&r=0"
+          alt="Logo"
+          class="logo"
+        />
         <p class="quote">
           "The most important thing is to enjoy your life - to be happy - it's
           all that matters."
         </p>
         <p class="author">- Audrey Hepburn</p>
       </div>
-
-      <div class="row1" style="color: white">
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          column-gap: 8px;
+          row-gap: 5px;
+          padding-bottom: 50px;
+        "
+      >
         <div class="column side">
           <h2>Positivity</h2>
           <img
@@ -305,55 +309,57 @@
             src="https://hips.hearstapps.com/hmg-prod/images/mature-woman-with-book-outdoors-in-autumn-royalty-free-image-1659020569.jpg?crop=1xw:0.84415xh;center,top&resize=1200:*"
           />
         </div>
+
+        <div>
+          <p style="width: 100%">
+            But I know we sometimes become unable to act as per our serious
+            preparation plans made with a strong mind earlier.. That state of
+            mind sometimes at some phases of life, starts to melt and we become
+            weak.. We start missing those beautiful memories, goals and persons
+            for which we had come to that extend where we faced loss.. We miss
+            those which are the reasons behind our current state of mind and
+            soul.. How funny is it.. But I believe and am gonna write here that,
+            we miss the previous versions of those persons and goals that had
+            attracted and cherished us once.. fulfilled our soul once.. But as
+            of now we have already seen their real faces or changed versions..
+            we should avoid all kind of feelings or emotions or that 'yess I
+            could have done this if I would have done that' type regrets related
+            to those past modules of life.. Because whether with failure or win,
+            we have already overcome all those phases and yes life is all about
+            'moving on' and 'letting things go'.. Every person.. Every phase..
+            Every desire.. come and reside with us for a certain period of
+            time.. play their roles in our life.. help us living through certain
+            hard phases of our life.. make memories.. and leave.. Now this word
+            'leave' may hurt some of us.. or I can say almost everyone of us
+            because that's the main reason behind all these plot twists of our
+            story of life we had to go through.. But I say let's take this word
+            'leave' as normal as the word 'come' as I used in the first half of
+            that sentence.. Let's take it as a flow.. or better we can say a
+            cycle of phases that starts with 'come' and ends with 'leave'.. And
+            again starts with 'come' and the cycle repeats.. If we want to lead
+            to a better life for is then we should repeat the cycle in a forward
+            manner.. not in a static manner that revolves around the same
+            entities..
+          </p>
+        </div>
       </div>
-    </div>
-    <div>
-      <p style="color: white">
-        But I know we sometimes become unable to act as per our serious
-        preparation plans made with a strong mind earlier.. That state of mind
-        sometimes at some phases of life, starts to melt and we become weak.. We
-        start missing those beautiful memories, goals and persons for which we
-        had come to that extend where we faced loss.. We miss those which are
-        the reasons behind our current state of mind and soul.. How funny is
-        it.. But I believe and am gonna write here that, we miss the previous
-        versions of those persons and goals that had attracted and cherished us
-        once.. fulfilled our soul once.. But as of now we have already seen
-        their real faces or changed versions.. we should avoid all kind of
-        feelings or emotions or that 'yess I could have done this if I would
-        have done that' type regrets related to those past modules of life..
-        Because whether with failure or win, we have already overcome all those
-        phases and yes life is all about 'moving on' and 'letting things go'..
-        Every person.. Every phase.. Every desire.. come and reside with us for
-        a certain period of time.. play their roles in our life.. help us living
-        through certain hard phases of our life.. make memories.. and leave..
-        Now this word 'leave' may hurt some of us.. or I can say almost everyone
-        of us because that's the main reason behind all these plot twists of our
-        story of life we had to go through.. But I say let's take this word
-        'leave' as normal as the word 'come' as I used in the first half of that
-        sentence.. Let's take it as a flow.. or better we can say a cycle of
-        phases that starts with 'come' and ends with 'leave'.. And again starts
-        with 'come' and the cycle repeats.. If we want to lead to a better life
-        for is then we should repeat the cycle in a forward manner.. not in a
-        static manner that revolves around the same entities..
-      </p>
     </div>
 
     <!-- About me -->
 
     <div class="Z" id="About Me">
-      <h1 class="section-title">About me</h1>
+      <h3 class="section-title">About me</h3>
       <p class="quote">
         Hii..This is me Sonalika, a grad student and an aspiring web developer,
         trying to have fun during practicing some web development techniques and
         write out all my thoughts on living a beautiful life.
       </p>
-      <p class="- Sonalika"></p>
     </div>
 
     <!-- Gallery -->
 
     <div class="A" id="Gallery">
-      <h1 class="section-title">Gallery</h1>
+      <h3 class="section-title">Gallery</h3>
       <div class="bucket">
         <div class="container">
           <div class="item">
@@ -484,7 +490,7 @@
     <!-- Contact -->
 
     <div class="container1" id="Contact">
-      <h1 class="section-title">Contact</h1>
+      <h3 class="section-title">Contact</h3>
 
       <form class="contact-form">
         <div class="form-group">
@@ -517,8 +523,11 @@
             required
           ></textarea>
         </div>
-        <div class="form-group">
-          <button type="submit">Send</button>
+        <div
+          class="form-group"
+          style="width: 100%; text-align: center; padding-top: 25px"
+        >
+          <button type="submit" style="width: 25%">Send</button>
         </div>
       </form>
     </div>
